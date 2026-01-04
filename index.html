@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiziz</title>
+    <style>
+        button {
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-color: rgb(20, 154, 20);
+            
+        }
+        button:hover{
+           background-color: rgb(50, 183, 50);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            gap: 10px;
+            padding-bottom: 15px;
+        }
+        ul li{
+            display:flex;
+            padding: 8px;
+            border: 2px solid rgba(128, 128, 128, 0.749);
+            font-size: 22px;
+            background-color: rgb(194, 220, 244);
+            cursor: pointer;
+        }
+
+        ul li:hover{
+            background-color: rgb(173, 208, 241);
+        }
+        .created{
+            margin: -5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Quiz Game - Made For You.</h1>
+        <div id="quiz">
+            <ul>
+                <!-- <li> a: "Hypertext Table Management List"</li>
+                <li> b: "Hyper Terminal Markup Language"</li>
+                <li> c: "HyperText Markup Language"</li>
+                <li> d: "Hydra Terminal Markup Language"</li> -->
+            </ul>
+        </div>
+        <div class="button">
+            <button id="submit">Get Results</button>
+        </div>
+        <div id="results"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
