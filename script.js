@@ -31,10 +31,32 @@ function loadQuestion() {
 
     questionEl.innerHTML = `<h2>${questions[currentIndex].question}</h2>`
 
-    optionsEl = ""  // When we move to the next questions, we dont want old options to stay
+    optionsEl.innerHTML = ""  // When we move to the next questions, we dont want old options to stay
+
+    questions[currentIndex].options.forEach(option => {
+        let li = document.createElement("li")
+        li.textContent = option;
+        optionsEl.append(li);
+    });
 }
 
 loadQuestion()
+
+// Selecting an answer
+
+let selectedAnswer = "";
+
+document.querySelector("ul").addEventListener("click", 
+    function (e) {
+        if(e.target.tagName === "LI"){
+            selectedAnswer = e.target.textContent.trim();
+
+            // highlight the selected answer
+            document.querySelectorAll("li").forEach(li =>
+                li.style.backgroundColor = "")
+                e.target.style.backgroundColor = "lightgreen"
+            }
+    });
 
 
 
