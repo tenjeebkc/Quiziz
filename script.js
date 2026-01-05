@@ -46,17 +46,36 @@ loadQuestion()
 
 let selectedAnswer = "";
 
-document.querySelector("ul").addEventListener("click", 
+document.querySelector("ul").addEventListener("click",
     function (e) {
-        if(e.target.tagName === "LI"){
+        if (e.target.tagName === "LI") {
             selectedAnswer = e.target.textContent.trim();
 
             // highlight the selected answer
             document.querySelectorAll("li").forEach(li =>
                 li.style.backgroundColor = "")
-                e.target.style.backgroundColor = "lightgreen"
-            }
+            e.target.style.backgroundColor = "lightgreen"
+        }
     });
+
+// Check answer
+document.getElementById("submit").addEventListener("click", () => {
+    if (selectedAnswer === questions[currentIndex].answer) {
+        alert("Correct")
+    }
+    else {
+        alert("Wrong!")
+    }
+    
+    currentIndex ++;
+    if(currentIndex < questions.length){
+        loadQuestion()
+    }
+    else{
+        alert("Quiz Completed");
+    }
+})
+
 
 
 
