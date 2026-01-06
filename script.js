@@ -2,19 +2,43 @@
 var questions = [
     {
         question: "1) What is the full form of HTML?",
-        options: [" Hypertext Table Management List",
-            " Hyper Terminal Markup Language",
-            " HyperText Markup Language",
-            " Hydra Terminal Markup Language"],
-        answer: "HyperText Markup Language"
+        options: [" Hypertext Table Management List.",
+            " Hyper Terminal Markup Language.",
+            " HyperText Markup Language.",
+            " Hydra Terminal Markup Language."],
+        answer: "HyperText Markup Language."
     },
     {
         question: "2) Inside which HTML element do we put the JavaScript?",
         options: ["<script>",
             "<scripting>",
             "<javascript>",
-            "d) <js>"],
+            "<js>"],
         answer: "<script>"
+    },
+    {
+        question: "3) Which built-in method calls a function for each element in the array?",
+        options: ["while()",
+            "loop()",
+            "forEach()",
+            "None of the above."],
+        answer: "forEach()"
+    },
+    {
+        question: "4)Which of the following is true about variable naming conventions in JavaScript? ",
+        options: ["JS variable names must begin with a letter or the underscore character.",
+            "JS variable names are case sensitive.",
+            "Both of the above.",
+            "None of the above."],
+        answer: "Both of the above."
+    },
+    {
+        question: "5) Which built-in method returns the string representaion of number's value?",
+        options: ["toValue()",
+            "toString()",
+            "toNumber()",
+            "tostring"],
+        answer: "toString()"
     }
 ];
 
